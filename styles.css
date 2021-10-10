@@ -1,0 +1,155 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: auto 50px auto 75px;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: large;
+}
+
+.search-button {
+    color: #447BAD;
+    border: none;
+    background-color: #F5F5F5;
+}
+
+main {
+    color: #447BAD;
+}
+
+.main-intro__orientation {
+    font-weight: bold;
+    margin: 7px;
+}
+
+h1 {
+    font-size: xx-large;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.carousel-section {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    max-width: 100%;
+}
+
+.carousel-item {
+    max-width: 269px;
+}
+
+.carousel-ken-daniels {
+    max-width: 320px;
+}
+
+.main-cta {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.women-button, .men-button {
+    margin: 10px;
+}
+
+header,
+footer {
+background-color: #447BAD;
+display: flex;
+}
+
+header a,
+footer a {
+color: #F5F5F5;
+}
+
+footer {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.social-media-section {
+    display: flex;
+    margin-left: 50x;
+    vertical-align: middle;
+}
+
+.social-item {
+    margin: 10px;
+}
+
+.footer-navigation {
+    display: flex;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.customer-support, .about {
+    margin: 10px;
+}
+
+.copyright-section {
+    color: #F5F5F5;
+    margin: 10px;
+    vertical-align: middle;
+    }
+
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+    .carousel-red-jacket, .carousel-blue-jacket {
+        display: none;
+    } 
+    
+}
+
+@media (max-width: 799px) {
+        .carousel-red-jacket, .carousel-ilse-jacobsen, .carousel-jack-wolfskin, .carousel-blue-jacket {
+            display: none;
+        }
+
+        .main-cta {
+            display: block;
+        }
+
+        header {
+            margin: 10px;
+        }
+
+        nav {
+            display: block;
+            margin: 10px;
+        }
+
+        footer {
+            display: block;
+        }
+    }
+
+@media (max-width: 499px) {
+    .logo {
+        display: none;
+    }
+}
