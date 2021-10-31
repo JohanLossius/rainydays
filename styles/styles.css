@@ -1,3 +1,10 @@
+/* Global Styles */
+
+@font-face {
+    font-family: "myfirstfont";
+    src: url("../fonts/ROCK.TTF") format("truetype");
+  }
+
 .carousel {
     display: flex;
     align-items: center;
@@ -5,6 +12,7 @@
 }
 
 body {
+    font-family: "myfirstfont", "Roboto", Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
 }
 
@@ -29,6 +37,13 @@ nav {
     background-color: #F5F5F5;
 }
 
+.search-field {
+    color: #447BAD;
+    border: none;
+    background-color: #F5F5F5;
+    font-family: "myfirstfont";
+}
+
 main {
     color: #447BAD;
 }
@@ -36,6 +51,17 @@ main {
 .main-intro__orientation {
     font-weight: bold;
     margin: 7px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: small;
+}
+
+.main-intro__title {
+    margin: 5px;
+}
+
+.rainy-days-nav {
+    font-style: normal;
 }
 
 h1 {
@@ -72,13 +98,13 @@ h1 {
 
 header,
 footer {
-background-color: #447BAD;
-display: flex;
+    background-color: #447BAD;
+    display: flex;
 }
 
 header a,
 footer a {
-color: #F5F5F5;
+    color: #F5F5F5;
 }
 
 footer {
@@ -93,28 +119,127 @@ footer {
     display: flex;
     margin-left: 50x;
     vertical-align: middle;
+    padding: 10px;
 }
 
 .social-item {
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 }
 
 .footer-navigation {
     display: flex;
     margin: 10px;
     vertical-align: middle;
+    padding: 10px;
 }
 
 .customer-support, .about {
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 }
 
 .copyright-section {
     color: #F5F5F5;
     margin: 10px;
     vertical-align: middle;
+    padding: 10px;
     }
 
+/* Home Page */
+
+/* Women */
+
+.category-section-top {
+    width: 80%;
+    float: right;
+    min-height: 50px;
+}
+
+.category-section-left {
+    width: 20%;
+    float: left;
+    min-height: 300px;
+    margin-top: 100px;
+}
+
+.main-jackets {
+    min-height: 700px;
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.jacket-box {
+    width: 25%;
+    min-height: 16px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.jacket-box-display {
+    height: 85%;
+}
+
+.jacket-box-description {
+    height: 15%;
+}
+
+.jacket-box-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.category-section-top {
+    display: flex;
+}
+
+.color-row-large, .size-icon-row {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.color-row-large {
+    margin: 0 0 0 15px;
+}
+
+.category-title {
+    margin: 0 0 0 10px;   
+}
+
+.category-item {
+    margin: 0 0 0 20px;
+    padding: 5px;
+}
+
+.checkbox-category {
+    float: right;
+    margin-right: 5px;
+}
+
+.jacket-box-description img, .jacket-box-image {
+    margin: auto;
+    display: block;
+}
+
+.jacket-box-description p {
+    margin: 0;
+    text-align: center;
+}
+
+.to-top-icon {
+    float: right;
+    margin: 10px;
+}
+
+/* Men */
+
+/* Search results */
+
+/* Jacket Specific */
+
+/* Customer Support */
+
+/* About */
 
 /* Media Queries */
 
@@ -126,30 +251,59 @@ footer {
 }
 
 @media (max-width: 799px) {
-        .carousel-red-jacket, .carousel-ilse-jacobsen, .carousel-jack-wolfskin, .carousel-blue-jacket {
-            display: none;
-        }
-
-        .main-cta {
-            display: block;
-        }
-
-        header {
-            margin: 10px;
-        }
-
-        nav {
-            display: block;
-            margin: 10px;
-        }
-
-        footer {
-            display: block;
-        }
+    .carousel-red-jacket, .carousel-ilse-jacobsen, .carousel-jack-wolfskin, .carousel-blue-jacket {
+        display: none;
     }
 
+    .main-cta {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    footer {
+        display: block;
+        align-items: center;
+    }
+
+    .social-media-section, .footer-navigation, .copyright-section {
+        width: 50%;
+        margin: auto; 
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 699px) {
+    .gender-navigation {
+        display: flex;
+        margin: 0;
+        padding: 15px 0 15px 15px;
+        justify-content: left;
+    }
+
+    header {
+        display: block;
+    }
+
+    .nav-div {
+        margin: 10px;
+    }
+    nav {
+        width: 90%;
+    }
+
+    .gender-navigation__women, .gender-navigation__men, .search-bar, .cart {
+        padding: 15px 15px 15px 0px;
+    }
+
+}
+
 @media (max-width: 499px) {
-    .logo {
-        display: none;
+    .gender-navigation {
+        display: block;
     }
 }
