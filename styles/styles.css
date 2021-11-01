@@ -230,9 +230,14 @@ footer {
     text-align: center;
 }
 
+.main-bottom {
+    min-height: 90px;
+    width: 90%;
+}
+
 .to-top-icon {
     float: right;
-    margin: 10px;
+    margin-right: 20px;
 }
 
 /* Men */
@@ -265,6 +270,30 @@ footer {
     }
 }
 
+@media (max-width: 1050px) {    
+    .category-section-left {
+        width: 80%;
+        margin: 0 200px 20px 100px;
+        float: none;
+        min-height: 30px;
+        margin-top: 0;
+        max-width: 400px;
+    }
+
+    .category-section-top {
+        width: 80%;
+        float: none;
+        min-height: 30px;
+        margin: 0 200px 20px 100px;
+        max-width: 400px;
+    }
+
+    .jacket-box {
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 799px) {
     .carousel-red-jacket, .carousel-ilse-jacobsen, .carousel-jack-wolfskin, .carousel-blue-jacket {
         display: none;
@@ -294,10 +323,6 @@ footer {
     .jacket-box {
         width: 50%;
     }
-
-    .category-section-left {
-        
-    }
 }
 
 @media (max-width: 699px) {
@@ -325,6 +350,27 @@ footer {
 
     .jacket-box {
         width: 100%;
+    }
+
+    .size-icon-row, .color-row-large {
+        margin: auto 5px;
+    }
+
+    .category-section-left {
+        width: 80%;
+        margin: 0 0 20px 0;
+        float: none;
+        min-height: 30px;
+        max-width: 400px;
+    }
+
+    .category-section-top {
+        width: 80%;
+        float: none;
+        min-height: 30px;
+        margin: 0;
+        max-width: 400px;
+        margin-left: 5px;
     }
 }
 
