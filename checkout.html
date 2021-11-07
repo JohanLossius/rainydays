@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Checkout page Rainy Days" />
+    <title>Checkout page Rainy Days</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body class="checkout-body">
+    <section class="checkout-header">
+        <a href="index.html" title="Home" class="back-to-store"> < Back to Store</a>
+        <a href="index.html" class="logo-link-checkout" title="logo-link">
+            <img src="images/Logo rainy days.svg" alt="Logo Rainy Days" class="logo" />
+        </a>
+        <a href="cart.html" title="Cart" class="cart-icon">
+            <img src="images/cart blue.svg" alt="Cart" class="cart-symbol-blue" />
+        </a>
+    </section>
+    <section class="checkout-personal-details">
+        <form action="/X" class="personal-details-form">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="full-name">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+            <label for="street-address">Street address</label>
+            <input type="text" id="street-address" name="street-address">
+            <label for="postal-code">Postal code</label>
+            <input type="text" id="postal-code" name="postal-code">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+            <label for="phone-input">Phone</label>
+            <input type="tel" id="phone-input" name="phone-input">
+            <label for="email-input">Email</label>
+            <input type="email" id="email-input" name="email-input">
+        </form> 
+    </section>
+    <section class="checkout-products">
+        <h1>Your product(s)</h1>
+        <div class="checkout-your-products" >
+            <div class="checkout-product-image">
+                <img src="images/Ken Daniels jacket.svg" title="Ken Daniel's Stormy Jacket" />
+            </div>
+            <div class="checkout-product-description">
+                <p class="checkout-product-title">Ken Daniel's Stormy Jacket (2)</p>
+                <p>Women, M, Blue, 75$</p>
+            </div>
+        </div>
+    </section>
+    <section class="checkout-delivery">
+        <h1>Where shall the goods be delivered?</h1>
+        <form action="/X" class="checkout-deliver-to-form">
+            <div class="home-delivery-div">
+                <label for="home-delivery" class="home-delivery-label">Home delivery (0$)</label>
+                <input type="checkbox" id="home-delivery" name="home-delivery">
+                <img src="images/bring-logo.svg" alt="Bring logo" class="bring-logo" />
+            </div>
+            <div class="deliver-to-div">   
+                <label for="deliver-to">Delivery address:</label>
+                <input type="text" id="deliver-to" name="deliver-to">
+            </div>
+            <div class="delivery-time-div">
+                <label for="delivery-time">Delivery time:</label>
+                <select id="delivery-time" name="delivery-time">
+                    <option value="9-12">9-12</option>
+                    <option value="12-15">12-15</option>
+                    <option value="15-18">15-18</option>
+                    <option value="18-21">18-21</option>
+                </select>
+            </div>
+            <div class="delivery-message-div">
+                <label for="delivery-message">Message Delivery Worker:</label>
+                <input type="text" id="delivery-message" name="delivery-message">
+            </div>
+            <div class="delivery-nearby-store-div">
+                <label for="deliver-nearby-store" class="deliver-nearby-label">Deliver to Nearby Store (0$)</label>
+                <input type="checkbox" id="deliver-nearby-store" name="deliver-nearby-store">
+                <img src="images/bring-logo.svg" alt="Bring logo" class="bring-logo" />
+            </div>
+            <div class="pickup-point-div">
+                <label for="pickup-point" class="pickup-point-label">Pickup-point (0$)</label>
+                <input type="checkbox" id="pickup-point" name="pickup-point">
+                <img src="images/Logo rainy days.svg" alt="Rainy Days logo" class="rainy-days-logo-checkout" />
+            </div>
+        </form>      
+    </section>
+    <section class="checkout-amount-to-pay">
+        <div class="checkout-amount-to-pay-div">
+            <h2>Amount to pay </h2>
+            <p>Shipping: 0 $</p>
+            <p>Product(s): 150 $</p>
+            <p>In total: 150 $</p>
+            <p>Including VAT: 37,50 $</p>
+        </div>
+    </section>
+    <section class="checkout-payment-details">
+        <div class="checkout-payment-details-div">
+            <h2>How to pay?</h2>
+            <form action="/X" class="checkout-payment-form">
+                <div class="card-div">
+                    <label for="card">Card <img src="images/mastercard.svg" alt="Mastercard" class="mastercard" /> 
+                        <img src="images/visa.svg" alt="Visa" class="visa" /></label>
+                    <input type="checkbox" id="card" name="card">
+                </div>
+                <div class="card-nr-div">
+                    <label for="card-nr">Card nr.</label>
+                    <input type="text" id="card-nr" name="card-nr">
+                </div>
+                <div class="name-on-card-div">
+                    <label for="name-on-card">Name on card</label>
+                    <input type="text" id="name-on-card" name="name-on-card">
+                </div>
+                <div class="expiration-date-div">
+                    <label for="expiration-date">Expiration date</label>
+                    <input type="text" id="expiration-date" name="expiration-date">
+                </div>
+                <div class="cvc-code-div">
+                    <label for="cvc-code">CVC code</label>
+                    <input type="text" id="cvc-code" name="cvc-code">
+                </div>
+                <div class="vipps-div">
+                    <label for="vipps"><img src="images/vipps.svg" alt="Vipps" class="vipps-logo"/></label>
+                    <input type="checkbox" id="vipps" name="vipps">
+                </div>
+                <div class="phone-nr-div">
+                    <label for="phone-nr-vipps">Phone nr.</label>
+                    <input type="text" id="phone-nr-vipps" name="phone-nr-vipps">
+                </div>
+            </form>
+            <p class="checkout-payment-cta-div">By completing the payment you consent to our <a href="X" title="Terms & Conditions" class="t-and-c-link">Terms and Conditions</a>.</p>
+
+            <a href="checkout-success.html" title="Checkout Success" >
+                <img src="images/pay-button.svg" alt="Pay button" class="pay-button" />
+            </a>
+            <p>Open Purchase 30 Days <img src="images/checkmark.svg" alt="checkmark" class="checkmark" /></p>
+            <p>Free Return <img src="images/checkmark.svg" alt="checkmark" class="checkmark" /></p>
+        </div>   
+    </section>
+    <section class="checkout-to-top">
+        <a href="#top" title="To top of page navigation">
+            <img src="images/to top icon.svg" alt="To top" class="to-top-icon" />
+        </a>
+    </section>
+  </body>
+</html>
