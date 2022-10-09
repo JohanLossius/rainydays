@@ -33,19 +33,18 @@
         </section>
         <section class="checkout-personal-details">
             <form action="/X" class="personal-details-form">
-                <label for="full-name">Full name</label>
+                <label for="full-name" id="full-name-label">Full name*</label>
                 <input type="text" id="full-name" name="full-name">
-                <label for="country">Country</label>
-                <input type="text" id="country" name="country">
-                <label for="street-address">Street address</label>
+                <p class="checkout-instruction">* Currently we only deliver to Norway *</p>
+                <label for="street-address" id="street-address-label">Street address*</label>
                 <input type="text" id="street-address" name="street-address">
-                <label for="postal-code">Postal code</label>
+                <label for="postal-code" id="postal-code-label">Postal code*</label>
                 <input type="text" id="postal-code" name="postal-code">
-                <label for="city">City</label>
+                <label for="city" id="city-label">City*</label>
                 <input type="text" id="city" name="city">
-                <label for="phone-input">Phone</label>
+                <label for="phone-input" id="phone-input-label">Phone*</label>
                 <input type="tel" id="phone-input" name="phone-input">
-                <label for="email-input">Email</label>
+                <label for="email-input" id="email-input-label">Email*</label>
                 <input type="email" id="email-input" name="email-input">
             </form> 
         </section>
@@ -62,20 +61,21 @@
             </div>
         </section>
         <section class="checkout-delivery">
-            <h1>Where shall the goods be delivered?</h1>
+            <h1>Where shall the goods be delivered?*</h1>
             <form action="/X" class="checkout-deliver-to-form">
                 <div class="home-delivery-div">
                     <label for="home-delivery" class="home-delivery-label">Home delivery (0$)</label>
                     <input type="checkbox" id="home-delivery" name="home-delivery">
                     <img src="images/bring-logo.svg" alt="Bring logo" class="bring-logo" />
                 </div>
-                <div class="deliver-to-div">   
-                    <label for="deliver-to">Delivery address:</label>
+                <div class="deliver-to-div">
+                    <label for="deliver-to" id="deliver-to-label">Delivery address:*</label>
                     <input type="text" id="deliver-to" name="deliver-to">
                 </div>
                 <div class="delivery-time-div">
                     <label for="delivery-time">Delivery time:</label>
                     <select id="delivery-time" name="delivery-time">
+                        <option value="9-21">9-21</option>
                         <option value="9-12">9-12</option>
                         <option value="12-15">12-15</option>
                         <option value="15-18">15-18</option>
@@ -92,8 +92,8 @@
                     <img src="images/bring-logo.svg" alt="Bring logo" class="bring-logo" />
                 </div>
                 <div class="pickup-point-div">
-                    <label for="pickup-point" class="pickup-point-label">Pickup-point (0$)</label>
-                    <input type="checkbox" id="pickup-point" name="pickup-point">
+                    <label for="pickup-point" class="pickup-point-label">Pickup-point (0$) (Alna, Oslo)</label>
+                    <input type="checkbox" id="pickup-point" name="pickup-point"> 
                     <img src="images/Logo rainy days.svg" alt="Rainy Days logo" class="rainy-days-logo-checkout" />
                 </div>
             </form>      
@@ -110,34 +110,36 @@
         <section class="checkout-payment-details">
             <div class="checkout-payment-details-div">
                 <h2>How to pay?</h2>
-                <form action="/X" class="checkout-payment-form">
-                    <div class="card-div">
-                        <label for="card">Card <img src="images/mastercard.svg" alt="Mastercard" class="mastercard" /> 
-                            <img src="images/visa.svg" alt="Visa" class="visa" /></label>
-                        <input type="checkbox" id="card" name="card">
-                    </div>
+                <div class="card-div">
+                    <label for="card">Card <img src="images/mastercard.svg" alt="Mastercard" class="mastercard" /> 
+                        <img src="images/visa.svg" alt="Visa" class="visa" /></label>
+                    <input type="checkbox" id="card" name="card">
+                </div>
+                <form action="/X" class="checkout-payment-form-card"></form>
                     <div class="card-nr-div">
-                        <label for="card-nr">Card nr.</label>
-                        <input type="text" id="card-nr" name="card-nr">
+                        <label for="card-nr" id="card-nr-label">Card nr.*</label>
+                        <input type="text" id="card-nr" class="card-div" name="card-nr">
                     </div>
                     <div class="name-on-card-div">
-                        <label for="name-on-card">Name on card</label>
-                        <input type="text" id="name-on-card" name="name-on-card">
+                        <label for="name-on-card" id="name-on-card-label">Name on card*</label>
+                        <input type="text" id="name-on-card" class="card-div" name="name-on-card">
                     </div>
                     <div class="expiration-date-div">
-                        <label for="expiration-date">Expiration date</label>
-                        <input type="text" id="expiration-date" name="expiration-date">
+                        <label for="expiration-date" id="expiration-label">Expiration date (mm/yy)*</label>
+                        <input type="text" id="expiration-date" class="card-div" name="expiration-date">
                     </div>
                     <div class="cvc-code-div">
-                        <label for="cvc-code">CVC code</label>
-                        <input type="text" id="cvc-code" name="cvc-code">
+                        <label for="cvc-code" id="cvc-label">CVC code (3 digits)*</label>
+                        <input type="text" id="cvc-code" class="card-div" name="cvc-code">
                     </div>
-                    <div class="vipps-div">
-                        <label for="vipps"><img src="images/vipps.svg" alt="Vipps" class="vipps-logo"/></label>
-                        <input type="checkbox" id="vipps" name="vipps">
-                    </div>
+                </form>
+                <div class="vipps-div">
+                    <label for="vipps"><img src="images/vipps.svg" alt="Vipps" class="vipps-logo"/></label>
+                    <input type="checkbox" id="vipps" name="vipps">
+                </div>
+                <form action="/X" class="checkout-payment-form-vipps"></form>
                     <div class="phone-nr-div">
-                        <label for="phone-nr-vipps">Phone nr.</label>
+                        <label for="phone-nr-vipps" id="phone-vipps-label">Phone nr.*</label>
                         <input type="text" id="phone-nr-vipps" name="phone-nr-vipps">
                     </div>
                 </form>
@@ -155,5 +157,6 @@
                 <img src="images/to top icon.svg" alt="To top" class="to-top-icon" />
             </a>
         </section>
+        <script src="js/checkout.js"></script>
     </body>
 </html>

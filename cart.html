@@ -44,7 +44,7 @@
         <p class="main-intro__orientation">You are here: <a href="index.html" class="rainy-days-nav" title="Home">Rainy Days</a> -> <a href="cart.html" class="rainy-days-nav" title="Cart">Cart</a></p>
         <h1>Cart</h1>
       </section>
-      <section class="cart">
+      <!-- <section class="cart">
         <div class="cart-header">
           <h2 class="cart-product-header">Product</h2>
           <h2 class="placeholder-description"> </h2>
@@ -72,17 +72,57 @@
             <img src="images/to-checkout-icon.svg" alt="Proceed to checkout" class="to-checkout-cta" />
           </a>
         </div>
+      </section> -->
+      <section class="cart">
+        <div class="cart-header">
+          <h2 class="cart-header-item cart-header-item-product">Product</h2>
+          <h2 class="cart-header-item cart-header-item-details">Details</h2>
+          <h2 class="cart-header-item cart-header-nr">Nr.</h2>
+          <h2 class="cart-header-item cart-header-price">Price</h2>
+          <h2 class="cart-header-item cart-header-total">Total</h2>
+          <h2 class="cart-header-item cart-header-delete">Delete</h2>
+        </div>
+
+
+        <div class="cart-purchase-item-placeholder-div">
+          <div class="cart-purchase-item-div">
+            <div class="cart-purchase-item cart-item-image-div"><img src="images/Ken Daniels jacket.svg" alt="Ken Daniel's Stormy Jacket" class="cart-item-product-image" /></div>
+            <div class="cart-purchase-item cart-item-product-description">
+              <h2>Ken Daniel's Stormy Jacket</h2>
+              <p>Women, M, Blue</p>
+            </div>
+            <div class="cart-purchase-item cart-item-nr">
+              <button class="add-item-button-cart">+</button>
+              <div class="cart-item-counter">1</div>
+              <button class="subtract-item-button-cart">-</button>
+            </div>
+            <h2 class="cart-purchase-item cart-item-price"><span class="price-span">75</span>$</h2>
+            <h2 class="cart-purchase-item cart-item-sum"><span class="price-span-sum">75</span>$</h2>
+            <div class="cart-purchase-item cart-item-delete-icon-div"><button class="cart-item-delete-icon">X</button></div>
+          </div>
+        </div>
+
+
+        <div class="cart-cta">
+          <a href="index.html" title="Home page" >
+            <img src="images/keep-shopping-cta.svg" alt="Keep shopping" class="keep-shopping-cta" />
+          </a>
+          <a href="checkout.html" title="Checkout page">
+            <img src="images/to-checkout-icon.svg" alt="Proceed to checkout" class="to-checkout-cta" />
+          </a>
+        </div>
       </section>
+
       <section class="also-seen-section-cart">
         <div class="also-seen-title">
           <h1 class="also-seen-h1">Have you also seen?</h1>
         </div>
         <div class="cart-also-seen">
         <div class="cart-also-seen-field">
-            <img src="images/Placeholder jacket.svg" Alt="Jacket" class="cart-also-seen-image" />
+            <img src="images/Ilse Jacobsen jacket.svg" Alt="Ilse-Jacobsen" class="cart-also-seen-image" />
         </div> 
         <div class="cart-also-seen-field">
-            <img src="images/Placeholder jacket.svg" Alt="Jacket" class="cart-also-seen-image" />
+            <img src="images/rød jakke.png" Alt="Red jacket" class="cart-also-seen-image" />
         </div>
         </div>
       </section>
@@ -123,5 +163,6 @@
         <div class="copyright">&copy; 2021 Rainy Days Inc. | All rights reserved.</div>
       </section>
     </footer>
+    <script src="js/cart.js"></script>
   </body>
 </html>

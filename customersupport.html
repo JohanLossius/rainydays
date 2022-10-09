@@ -63,48 +63,56 @@
 
         <p class="customer-support-instructions">Opening hours customer support: 8:00-17:00, Monday through Friday, follows Norwegian work days and holidays.</p>
 
-        <p class="customer-support-instructions">** Please provide your product id and order id if your enquiry is related to an existing order or purchase. **</p>
+        <p class="customer-support-instructions">** Please provide your Order ID if your enquiry is related to an existing order or purchase. **</p>
       </section>
       <section class="customer-support-form-section" >
         <h2>Fill in your customer support request below!</h2>
         <form action="/X" class="customer-support-form">
+          <div class="form-success-message customer-support-form-div"></div>
           <div class="customer-support-form-div">
-            <label for="full-name">Full name</label>
+            <label for="full-name" id="name-label">Full name*</label>
             <input type="text" id="full-name" name="full-name">
           </div>
           <div class="customer-support-form-div">
-            <label for="phone-input">Phone</label>
+            <label for="phone-input" id="phone-label">Phone*</label>
             <input type="tel" id="phone-input" name="phone-input">
           </div>
           <div class="customer-support-form-div"> 
-            <label for="email-input">Email</label>
+            <label for="email-input" id="email-label">Email*</label>
             <input type="email" id="email-input" name="email-input">
           </div>
           <div class="customer-support-form-div"> 
-            <label for="postal-code">What is your enquiry about?</label>
+            <label for="enquiry-about" id="enquiry-about-label">What is your enquiry about?*</label>
             <select id="enquiry-about" name="enquiry-about">
-              <option value="Purchase help">Purchase help</option>  
+              <option value="General enquiry">General enquiry</option> 
+              <option value="Purchase help">Purchase help</option>
+              <option value="Product assistance">Product support</option>  
               <option value="Order tracking">Order tracking</option>
-              <option value="Product assistance">Product assistance</option>
               <option value="Product return">Product return</option>
               <option value="Other">Other</option>
             </select>
           </div>
-          <div class="customer-support-form-div"> 
-            <label for="product-id">Product id</label>
+          <!-- <div class="customer-support-form-div"> 
+            <label for="product-id" id="product-id-label">Product ID: Required for product support</label>
             <input type="text" id="product-id" name="product-id">
           </div>
           <div class="customer-support-form-div"> 
-            <label for="order-id">Order id</label>
+            <label for="order-id" id="order-id-label">Order ID: Required for order tracking and product returns</label>
             <input type="text" id="order-id" name="order-id">
+          </div> -->
+          <div class="customer-support-instructions-div">
+            <p>Please include your <u>Order ID</u> if your enquiry is related to an existing order or purchase:</p>
           </div>
           <div class="customer-support-form-div"> 
-            <label for="customer-support-message">Your message</label>
+            <label for="customer-support-message" id="message-label">Your message*</label>
             <input type="text" id="customer-support-message" name="customer-support-message">
           </div>
           <div class="customer-support-form-submit-div"> 
-            <a href="customersupport-success.html" title="Customer support success" class="send-button-link-customer-support"><img src="images/send-button.svg" class="send-button-customer-support"></a>
+            <button type="submit" id="submit-button">Submit</button>
           </div>
+          <!-- <div class="customer-support-form-submit-div"> 
+            <a href="customersupport-success.html" title="Customer support success" class="send-button-link-customer-support"><img src="images/send-button.svg" class="send-button-customer-support"></a>
+          </div> -->
         </form>
       </section>
     </main>
@@ -139,5 +147,6 @@
         <div class="copyright">&copy; 2021 Rainy Days Inc. | All rights reserved.</div>
       </section>
     </footer>
+    <script src="js/customersupport.js"></script>
   </body>
 </html>
