@@ -141,33 +141,51 @@ input {
     font-weight: bold;
     max-width: 95%;
     margin: auto;
-    min-height: 700px;
+    min-height: 450px;
 }
 
 .carousel-item {
-    max-width: 269px;
-    margin: 5px;
-}
-
-.carousel-item > a {
-    width: 100%;
-    height: auto;
+    width: 20%;
+    text-align: center;
 }
 
 .carousel-jacket-image {
-    width: 100%;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    margin-top: 0;
+    max-height: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.carousel-ken-daniels {
-    max-width: 320px;
+.highlighted-carousel-jacket-image {
+    height: 100%;
+    width: auto;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    max-height: 450px:
 }
 
-.main-cta {
+.carousel-item > a {
+    width: auto;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.product-details-and-nav-section {
     display: flex;
     justify-content: center;
     padding: 25px;
     flex-wrap: wrap;
     min-height: 200px;
+    max-width: 40%;
+    margin: auto;
 }
 
 .women-button, .men-button {
@@ -178,6 +196,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 40%;
 }
 
 .carousel-in-stock-div, .carousel-review-div, .carousel-product-description-div, .carousel-buy-button-div {
@@ -185,6 +204,7 @@ input {
     min-height: 35px;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .carousel-in-stock-div img {
@@ -252,7 +272,8 @@ input {
 }
 
 .jacket-box-display {
-    height: 85%;
+    height: auto;
+    padding: 1rem;
 }
 
 .jacket-box-description {
@@ -262,7 +283,15 @@ input {
 .jacket-box-image {
     max-width: 80%;
     height: auto;
-    max-height: 80%;
+    max-height: 325px;
+    width: auto;
+}
+
+.jacket-specific-image {
+    max-width: 80%;
+    height: auto;
+    max-height: 450px;
+    width: auto;
 }
 
 .category-section-top {
@@ -352,16 +381,14 @@ h1.jacket-specific-title {
     float: right;
 }
 
-.green-dot-jacket-specific {
+.green-dot-jacket-specific, .red-dot-jacket-specific {
     width: 20px;
+    margin-right: 12px;
 }
 
 .price-jacket-specific {
     width: 65%;
-}
-
-.green-dot-jacket-specific {
-    margin-right: 12px;
+    font-weight: bold;
 }
 
 .line-jacket-specific {
@@ -1020,8 +1047,35 @@ h1.jacket-specific-title {
 
 /* Media Queries */
 
+@media (max-width: 1600px) {
+    .carousel-jacket-image {
+        max-height: 280px;
+    }
+
+    .highlighted-carousel-jacket-image {
+        height: 90%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .product-details-and-nav-section {
+        max-width: 50%;
+    }
+
+    .carousel-section {
+        min-height: 400px;
+    }
+    .carousel-jacket-image {
+        max-height: 250px;
+    }
+
+    .highlighted-carousel-jacket-image {
+        height: 90%;
+    }
+}
+
 @media (max-width: 1300px) {
-    .carousel-red-jacket, .carousel-blue-jacket {
+    .non-highlighted-carousel-item-outer {
         display: none;
     } 
     
@@ -1035,6 +1089,10 @@ h1.jacket-specific-title {
 
     .jacket-box {
         width: 33%;
+    }
+
+    .highlighted-carousel-item {
+        width: 30%;
     }
 }
 
@@ -1053,6 +1111,12 @@ h1.jacket-specific-title {
 
     .jacket-specific-details {
         width: 50%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .product-details-and-nav-section {
+        max-width: 60%;
     }
 }
 
@@ -1096,6 +1160,10 @@ h1.jacket-specific-title {
         max-height: 19px;
     }
 
+    .highlighted-carousel-item {
+        width: 35%;
+    }
+
 }
 
 @media (max-width: 999px) {       
@@ -1131,8 +1199,28 @@ h1.jacket-specific-title {
     }
 }
 
+@media (max-width: 950px) {
+    .product-details-and-nav-section {
+        max-width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-product-details-div {
+        max-width: 50%;
+    }
+
+    .main-cta {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
 @media (max-width: 799px) {
-    .carousel-red-jacket, .carousel-ilse-jacobsen, .carousel-jack-wolfskin, .carousel-blue-jacket {
+    .non-highlighted-carousel-item-inner {
         display: none;
     }
 
@@ -1228,6 +1316,10 @@ h1.jacket-specific-title {
         justify-content: left;
     }
 
+    .carousel-product-details-div {
+        max-width: 60%;
+    }
+
     header {
         display: block;
     }
@@ -1312,8 +1404,12 @@ h1.jacket-specific-title {
         width: 100%;
     }
 
-    .main-cta {
+    .product-details-and-nav-section {
         padding: 15px;
+    }
+
+    .carousel-product-details-div {
+        max-width: 70%;
     }
 }
 
@@ -1397,5 +1493,9 @@ h1.jacket-specific-title {
         flex-direction: column;
         justify-content: center;
         float: none;
+    }
+
+    .carousel-product-details-div {
+        max-width: 80%;
     }
 }
